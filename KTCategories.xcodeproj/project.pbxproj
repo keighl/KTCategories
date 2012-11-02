@@ -16,8 +16,8 @@
 		CFA86EE21643F40500EBF92F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = CFA86EE11643F40500EBF92F /* Default.png */; };
 		CFA86EE41643F40500EBF92F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFA86EE31643F40500EBF92F /* Default@2x.png */; };
 		CFA86EE61643F40500EBF92F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFA86EE51643F40500EBF92F /* Default-568h@2x.png */; };
-		CFA86EEE1643F46700EBF92F /* UIView+KTExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA86EED1643F46700EBF92F /* UIView+KTExtras.m */; };
 		CFA86EF11643F50B00EBF92F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFA86EF01643F50B00EBF92F /* QuartzCore.framework */; };
+		CFA86EFD1643FA0B00EBF92F /* UIView+KTExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA86EFC1643FA0B00EBF92F /* UIView+KTExtras.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,9 +34,9 @@
 		CFA86EE11643F40500EBF92F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		CFA86EE31643F40500EBF92F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		CFA86EE51643F40500EBF92F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		CFA86EEC1643F46700EBF92F /* UIView+KTExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+KTExtras.h"; sourceTree = "<group>"; };
-		CFA86EED1643F46700EBF92F /* UIView+KTExtras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+KTExtras.m"; sourceTree = "<group>"; };
 		CFA86EF01643F50B00EBF92F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		CFA86EFB1643FA0B00EBF92F /* UIView+KTExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+KTExtras.h"; path = "categories/UIView+KTExtras.h"; sourceTree = "<group>"; };
+		CFA86EFC1643FA0B00EBF92F /* UIView+KTExtras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+KTExtras.m"; path = "categories/UIView+KTExtras.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,10 +85,9 @@
 		CFA86ED51643F40500EBF92F /* KTCategories */ = {
 			isa = PBXGroup;
 			children = (
+				CFA86EFE1643FA0F00EBF92F /* categories */,
 				CFA86EDE1643F40500EBF92F /* KTAppDelegate.h */,
 				CFA86EDF1643F40500EBF92F /* KTAppDelegate.m */,
-				CFA86EEC1643F46700EBF92F /* UIView+KTExtras.h */,
-				CFA86EED1643F46700EBF92F /* UIView+KTExtras.m */,
 				CFA86ED61643F40500EBF92F /* Supporting Files */,
 			);
 			path = KTCategories;
@@ -106,6 +105,15 @@
 				CFA86EE51643F40500EBF92F /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CFA86EFE1643FA0F00EBF92F /* categories */ = {
+			isa = PBXGroup;
+			children = (
+				CFA86EFB1643FA0B00EBF92F /* UIView+KTExtras.h */,
+				CFA86EFC1643FA0B00EBF92F /* UIView+KTExtras.m */,
+			);
+			name = categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,7 +184,7 @@
 			files = (
 				CFA86EDC1643F40500EBF92F /* main.m in Sources */,
 				CFA86EE01643F40500EBF92F /* KTAppDelegate.m in Sources */,
-				CFA86EEE1643F46700EBF92F /* UIView+KTExtras.m in Sources */,
+				CFA86EFD1643FA0B00EBF92F /* UIView+KTExtras.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +297,7 @@
 				CFA86EEB1643F40500EBF92F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
