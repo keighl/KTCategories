@@ -18,6 +18,8 @@
 		CFA86EE61643F40500EBF92F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CFA86EE51643F40500EBF92F /* Default-568h@2x.png */; };
 		CFA86EF11643F50B00EBF92F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFA86EF01643F50B00EBF92F /* QuartzCore.framework */; };
 		CFA86EFD1643FA0B00EBF92F /* UIView+KTExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA86EFC1643FA0B00EBF92F /* UIView+KTExtras.m */; };
+		CFA86F2016440CDC00EBF92F /* UIColor+KTExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA86F1F16440CDC00EBF92F /* UIColor+KTExtras.m */; };
+		CFA86F3D16440DD300EBF92F /* NSData+KTExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA86F3C16440DD300EBF92F /* NSData+KTExtras.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,10 @@
 		CFA86EF01643F50B00EBF92F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		CFA86EFB1643FA0B00EBF92F /* UIView+KTExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+KTExtras.h"; path = "categories/UIView+KTExtras.h"; sourceTree = "<group>"; };
 		CFA86EFC1643FA0B00EBF92F /* UIView+KTExtras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+KTExtras.m"; path = "categories/UIView+KTExtras.m"; sourceTree = "<group>"; };
+		CFA86F1E16440CDC00EBF92F /* UIColor+KTExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+KTExtras.h"; path = "categories/UIColor+KTExtras.h"; sourceTree = "<group>"; };
+		CFA86F1F16440CDC00EBF92F /* UIColor+KTExtras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+KTExtras.m"; path = "categories/UIColor+KTExtras.m"; sourceTree = "<group>"; };
+		CFA86F3B16440DD300EBF92F /* NSData+KTExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+KTExtras.h"; path = "categories/NSData+KTExtras.h"; sourceTree = "<group>"; };
+		CFA86F3C16440DD300EBF92F /* NSData+KTExtras.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+KTExtras.m"; path = "categories/NSData+KTExtras.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +118,10 @@
 			children = (
 				CFA86EFB1643FA0B00EBF92F /* UIView+KTExtras.h */,
 				CFA86EFC1643FA0B00EBF92F /* UIView+KTExtras.m */,
+				CFA86F1E16440CDC00EBF92F /* UIColor+KTExtras.h */,
+				CFA86F1F16440CDC00EBF92F /* UIColor+KTExtras.m */,
+				CFA86F3B16440DD300EBF92F /* NSData+KTExtras.h */,
+				CFA86F3C16440DD300EBF92F /* NSData+KTExtras.m */,
 			);
 			name = categories;
 			sourceTree = "<group>";
@@ -185,6 +195,8 @@
 				CFA86EDC1643F40500EBF92F /* main.m in Sources */,
 				CFA86EE01643F40500EBF92F /* KTAppDelegate.m in Sources */,
 				CFA86EFD1643FA0B00EBF92F /* UIView+KTExtras.m in Sources */,
+				CFA86F2016440CDC00EBF92F /* UIColor+KTExtras.m in Sources */,
+				CFA86F3D16440DD300EBF92F /* NSData+KTExtras.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
