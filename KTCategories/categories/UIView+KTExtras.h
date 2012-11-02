@@ -25,8 +25,8 @@
 - (void)padLeftBy:(CGFloat)points;
 - (void)padRightBy:(CGFloat)points;
 
-- (void)placeYAfterView:(UIView *)view withMargin:(CGFloat)margin;
-- (void)placeXAfterView:(UIView *)view withMargin:(CGFloat)margin;
+- (void)placeYAfterView:(UIView *)view withMarginX:(CGFloat)margin;
+- (void)placeXAfterView:(UIView *)view withMarginX:(CGFloat)margin;
 
 - (void)roundByWidth;
 - (void)roundByHeight;

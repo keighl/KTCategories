@@ -115,6 +115,7 @@
 {
   CGRect frame = self.frame;
   frame.origin.y = view.frame.origin.y + view.frame.size.height + margin;
+  frame.origin.x = view.frame.origin.x;
   self.frame = frame;
 }
 
@@ -122,6 +123,7 @@
 {
   CGRect frame = self.frame;
   frame.origin.x = view.frame.origin.x + view.frame.size.width + margin;
+  frame.origin.y = view.frame.origin.y;
   self.frame = frame;
 }
 
