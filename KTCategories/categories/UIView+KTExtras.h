@@ -9,9 +9,13 @@
 @interface UIView (KTExtras)
 
 - (void)anchorToTop;
+- (void)anchorToTopWithMargin:(CGFloat)margin;
 - (void)anchorToBottom;
+- (void)anchorToBottomWithMargin:(CGFloat)margin;
 - (void)anchorToLeft;
+- (void)anchorToLeftWithMargin:(CGFloat)margin;
 - (void)anchorToRight;
+- (void)anchorToRightWithMargin:(CGFloat)margin;
 
 - (void)centerXY;
 - (void)centerXYInRect:(CGRect)rect;

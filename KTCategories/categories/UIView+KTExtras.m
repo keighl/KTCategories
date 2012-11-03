@@ -20,10 +20,24 @@
   self.frame = frame;
 }
 
+- (void)anchorToTopWithMargin:(CGFloat)margin
+{
+  CGRect frame = self.frame;
+  frame.origin.y =  0 + margin;
+  self.frame = frame;
+}
+
 - (void)anchorToBottom
 {
   CGRect frame = self.frame;
   frame.origin.y =  self.superview.bounds.size.height - frame.size.height;
+  self.frame = frame;
+}
+
+- (void)anchorToBottomWithMargin:(CGFloat)margin
+{
+  CGRect frame = self.frame;
+  frame.origin.y =  self.superview.bounds.size.height - frame.size.height - margin;
   self.frame = frame;
 }
 
@@ -34,10 +48,24 @@
   self.frame = frame;
 }
 
+- (void)anchorToLeftWithMargin:(CGFloat)margin
+{
+  CGRect frame = self.frame;
+  frame.origin.x =  0 + margin;
+  self.frame = frame;
+}
+
 - (void)anchorToRight
 {
   CGRect frame = self.frame;
   frame.origin.x =  self.superview.bounds.size.width - frame.size.width;
+  self.frame = frame;
+}
+
+- (void)anchorToRightWithMargin:(CGFloat)margin
+{
+  CGRect frame = self.frame;
+  frame.origin.x =  self.superview.bounds.size.width - frame.size.width - margin;
   self.frame = frame;
 }
 
