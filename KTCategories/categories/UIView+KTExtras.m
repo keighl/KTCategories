@@ -13,60 +13,72 @@
 
 #pragma Achorages
 
-- (void)anchorToTop
-{
-  CGRect frame = self.frame;
-  frame.origin.y =  0;
-  self.frame = frame;
-}
-
-- (void)anchorToTopWithMargin:(CGFloat)margin
+- (void)anchorToTopInRect:(CGRect)rect withMargin:(CGFloat)margin
 {
   CGRect frame = self.frame;
   frame.origin.y =  0 + margin;
   self.frame = frame;
 }
 
-- (void)anchorToBottom
+- (void)anchorToTop
+{
+  [self anchorToRightInRect:self.superview.bounds withMargin:0.f];
+}
+
+- (void)anchorToTopWithMargin:(CGFloat)margin
+{
+  [self anchorToRightInRect:self.superview.bounds withMargin:margin];
+}
+
+- (void)anchorToBottomInRect:(CGRect)rect withMargin:(CGFloat)margin
 {
   CGRect frame = self.frame;
-  frame.origin.y =  self.superview.bounds.size.height - frame.size.height;
+  frame.origin.y =  rect.size.height - frame.size.height - margin;
   self.frame = frame;
+}
+
+- (void)anchorToBottom
+{
+  [self anchorToBottomInRect:self.superview.bounds withMargin:0.f];
 }
 
 - (void)anchorToBottomWithMargin:(CGFloat)margin
 {
-  CGRect frame = self.frame;
-  frame.origin.y =  self.superview.bounds.size.height - frame.size.height - margin;
-  self.frame = frame;
+  [self anchorToBottomInRect:self.superview.bounds withMargin:margin];
 }
 
-- (void)anchorToLeft
-{
-  CGRect frame = self.frame;
-  frame.origin.x =  0;
-  self.frame = frame;
-}
-
-- (void)anchorToLeftWithMargin:(CGFloat)margin
+- (void)anchorToLeftInRect:(CGRect)rect withMargin:(CGFloat)margin
 {
   CGRect frame = self.frame;
   frame.origin.x =  0 + margin;
   self.frame = frame;
 }
 
-- (void)anchorToRight
+- (void)anchorToLeft
+{
+  [self anchorToLeftInRect:self.superview.bounds withMargin:0.f];
+}
+
+- (void)anchorToLeftWithMargin:(CGFloat)margin
+{
+  [self anchorToLeftInRect:self.superview.bounds withMargin:margin];
+}
+
+- (void)anchorToRightInRect:(CGRect)rect withMargin:(CGFloat)margin
 {
   CGRect frame = self.frame;
-  frame.origin.x =  self.superview.bounds.size.width - frame.size.width;
+  frame.origin.x =  rect.size.width - frame.size.width - margin;
   self.frame = frame;
+}
+
+- (void)anchorToRight
+{
+  [self anchorToRightInRect:self.superview.bounds withMargin:0.f];
 }
 
 - (void)anchorToRightWithMargin:(CGFloat)margin
 {
-  CGRect frame = self.frame;
-  frame.origin.x =  self.superview.bounds.size.width - frame.size.width - margin;
-  self.frame = frame;
+  [self anchorToRightInRect:self.superview.bounds withMargin:margin];
 }
 
 #pragma Alignments
