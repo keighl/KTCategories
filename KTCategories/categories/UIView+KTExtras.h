@@ -43,4 +43,9 @@
 - (void)roundByHeight;
 - (void)roundBy:(CGFloat)radius;
 
+- (void)setFrameOriginX:(CGFloat)x;
+- (void)setFrameOriginY:(CGFloat)y;
+- (void)setFrameSizeWidth:(CGFloat)width;
+- (void)setFrameSizeHeight:(CGFloat)height;
+
 @end

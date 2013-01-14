@@ -184,4 +184,34 @@
   self.layer.cornerRadius = radius;
 }
 
+#pragma - Set frame attributes
+
+- (void)setFrameOriginX:(CGFloat)x
+{
+  CGRect frame   = self.frame;
+  frame.origin.x = x;
+  self.frame     = frame;
+}
+
+- (void)setFrameOriginY:(CGFloat)y
+{
+  CGRect frame   = self.frame;
+  frame.origin.y = y;
+  self.frame     = frame;
+}
+
+- (void)setFrameSizeWidth:(CGFloat)width
+{
+  CGRect frame     = self.frame;
+  frame.size.width = width;
+  self.frame       = frame;
+}
+
+- (void)setFrameSizeHeight:(CGFloat)height
+{
+  CGRect frame      = self.frame;
+  frame.size.height = height;
+  self.frame        = frame;
+}
+
 @end
