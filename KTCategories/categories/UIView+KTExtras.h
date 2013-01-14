@@ -8,7 +8,6 @@
 
 @interface UIView (KTExtras)
 
-
 - (void)anchorToTopInRect:(CGRect)rect withMargin:(CGFloat)margin;
 - (void)anchorToTop;
 - (void)anchorToTopWithMargin:(CGFloat)margin;

@@ -11,23 +11,23 @@
 
 @implementation UIView (KTExtras)
 
-#pragma Achorages
+#pragma - Achorages
 
 - (void)anchorToTopInRect:(CGRect)rect withMargin:(CGFloat)margin
 {
   CGRect frame = self.frame;
-  frame.origin.y =  0 + margin;
+  frame.origin.y =  0.f + margin;
   self.frame = frame;
 }
 
 - (void)anchorToTop
 {
-  [self anchorToRightInRect:self.superview.bounds withMargin:0.f];
+  [self anchorToTopInRect:self.superview.bounds withMargin:0.f];
 }
 
 - (void)anchorToTopWithMargin:(CGFloat)margin
 {
-  [self anchorToRightInRect:self.superview.bounds withMargin:margin];
+  [self anchorToTopInRect:self.superview.bounds withMargin:margin];
 }
 
 - (void)anchorToBottomInRect:(CGRect)rect withMargin:(CGFloat)margin
@@ -149,7 +149,7 @@
   self.frame = frame;
 }
 
-#pragma Placements
+#pragma - Placements
 
 - (void)placeYAfterView:(UIView *)view withMargin:(CGFloat)margin
 {
@@ -167,7 +167,7 @@
   self.frame = frame;
 }
 
-#pragma Corner Radius
+#pragma - Corner Radius
 
 - (void)roundByWidth
 {
