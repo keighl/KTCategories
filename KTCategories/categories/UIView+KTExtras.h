@@ -39,6 +39,9 @@
 - (void)placeYAfterView:(UIView *)view withMargin:(CGFloat)margin;
 - (void)placeXAfterView:(UIView *)view withMargin:(CGFloat)margin;
 
+- (void)placeYBeforeView:(UIView *)view withMargin:(CGFloat)margin;
+- (void)placeXBeforeView:(UIView *)view withMargin:(CGFloat)margin;
+
 - (void)roundByWidth;
 - (void)roundByHeight;
 - (void)roundBy:(CGFloat)radius;

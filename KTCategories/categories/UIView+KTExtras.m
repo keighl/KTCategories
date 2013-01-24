@@ -167,6 +167,22 @@
   self.frame = frame;
 }
 
+- (void)placeYBeforeView:(UIView *)view withMargin:(CGFloat)margin
+{
+  CGRect frame = self.frame;
+  frame.origin.y = view.frame.origin.y - frame.size.height - margin;
+  frame.origin.x = view.frame.origin.x;
+  self.frame = frame;
+}
+
+- (void)placeXBeforeView:(UIView *)view withMargin:(CGFloat)margin
+{
+  CGRect frame = self.frame;
+  frame.origin.x = view.frame.origin.x - frame.size.width - margin;
+  frame.origin.y = view.frame.origin.y;
+  self.frame = frame;
+}
+
 #pragma - Corner Radius
 
 - (void)roundByWidth
