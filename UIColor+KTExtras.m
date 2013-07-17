@@ -15,4 +15,9 @@
   return [UIColor colorWithHue:0 saturation:0 brightness:brightness alpha:1.f];
 }
 
++ (UIColor *)greyColorWithBrightness:(CGFloat)brightness alpha:(float)alpha
+{
+  return [UIColor colorWithHue:0 saturation:0 brightness:brightness alpha:alpha];
+}
+
 @end

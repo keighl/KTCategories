@@ -7,18 +7,12 @@
 //
 
 #import "UIView+KTExtras.h"
-#import <QuartzCore/QuartzCore.h>
 
 @implementation UIView (KTExtras)
 
-#pragma - Achorages
+#pragma - Anchors
 
-- (void)anchorToTopInRect:(CGRect)rect withMargin:(CGFloat)margin
-{
-  CGRect frame = self.frame;
-  frame.origin.y =  0.f + margin;
-  self.frame = frame;
-}
+// Top
 
 - (void)anchorToTop
 {
@@ -30,12 +24,14 @@
   [self anchorToTopInRect:self.superview.bounds withMargin:margin];
 }
 
-- (void)anchorToBottomInRect:(CGRect)rect withMargin:(CGFloat)margin
+- (void)anchorToTopInRect:(CGRect)rect withMargin:(CGFloat)margin
 {
   CGRect frame = self.frame;
-  frame.origin.y =  rect.size.height - frame.size.height - margin;
+  frame.origin.y =  0.f + margin;
   self.frame = frame;
 }
+
+// Bottom
 
 - (void)anchorToBottom
 {
@@ -47,12 +43,14 @@
   [self anchorToBottomInRect:self.superview.bounds withMargin:margin];
 }
 
-- (void)anchorToLeftInRect:(CGRect)rect withMargin:(CGFloat)margin
+- (void)anchorToBottomInRect:(CGRect)rect withMargin:(CGFloat)margin
 {
   CGRect frame = self.frame;
-  frame.origin.x =  0 + margin;
+  frame.origin.y =  rect.size.height - frame.size.height - margin;
   self.frame = frame;
 }
+
+// Left
 
 - (void)anchorToLeft
 {
@@ -64,12 +62,14 @@
   [self anchorToLeftInRect:self.superview.bounds withMargin:margin];
 }
 
-- (void)anchorToRightInRect:(CGRect)rect withMargin:(CGFloat)margin
+- (void)anchorToLeftInRect:(CGRect)rect withMargin:(CGFloat)margin
 {
   CGRect frame = self.frame;
-  frame.origin.x =  rect.size.width - frame.size.width - margin;
+  frame.origin.x =  0 + margin;
   self.frame = frame;
 }
+
+// Right
 
 - (void)anchorToRight
 {
@@ -81,7 +81,54 @@
   [self anchorToRightInRect:self.superview.bounds withMargin:margin];
 }
 
-#pragma Alignments
+- (void)anchorToRightInRect:(CGRect)rect withMargin:(CGFloat)margin
+{
+  CGRect frame = self.frame;
+  frame.origin.x =  rect.size.width - frame.size.width - margin;
+  self.frame = frame;
+}
+
+#pragma Anchor On
+
+- (void)anchorToTopOnRect:(CGRect)rect withMargin:(CGFloat)margin
+{
+  CGRect frame = self.frame;
+  frame.origin.y =  rect.origin.y;
+  self.frame = frame;
+}
+
+- (void)anchorToBottomOnRect:(CGRect)rect withMargin:(CGFloat)margin
+{
+  CGRect frame = self.frame;
+  frame.origin.y = (rect.origin.y) + (CGRectGetHeight(rect) - CGRectGetHeight(frame));
+  self.frame = frame;
+}
+
+- (void)anchorToLeftOnRect:(CGRect)rect withMargin:(CGFloat)margin
+{
+  CGRect frame = self.frame;
+  frame.origin.x =  rect.origin.x + margin;
+  self.frame = frame;
+}
+
+- (void)anchorToRightOnRect:(CGRect)rect withMargin:(CGFloat)margin
+{
+  CGRect frame = self.frame;
+  frame.origin.x =  rect.origin.x + rect.size.width - frame.size.width - margin;
+  self.frame = frame;
+}
+
+#pragma Alignment
+
+- (void)centerX
+{
+  [self centerXInRect:self.superview.bounds];
+}
+
+- (void)centerY
+{
+  [self centerYInRect:self.superview.bounds];
+}
 
 - (void)centerXY
 {
@@ -95,21 +142,11 @@
   [self centerYInRect:rect];
 }
 
-- (void)centerX
-{
-  [self centerXInRect:self.superview.bounds];
-}
-
 - (void)centerXInRect:(CGRect)rect
 {
   CGRect frame = self.frame;
   frame.origin.x =  floorf((rect.size.width)/2.f - (frame.size.width)/2.f);
   self.frame = frame;
-}
-
-- (void)centerY
-{
-  [self centerYInRect:self.superview.bounds];
 }
 
 - (void)centerYInRect:(CGRect)rect
@@ -119,7 +156,21 @@
   self.frame = frame;
 }
 
-#pragma Paddings
+- (void)centerXOnRect:(CGRect)rect
+{
+  CGRect frame = self.frame;
+  frame.origin.x =  rect.origin.x + floorf((rect.size.width)/2.f - (frame.size.width)/2.f);
+  self.frame = frame;
+}
+
+- (void)centerYOnRect:(CGRect)rect
+{
+  CGRect frame = self.frame;
+  frame.origin.y =  rect.origin.y + floorf((rect.size.height)/2.f - (frame.size.height)/2.f);
+  self.frame = frame;
+}
+
+#pragma Padding
 
 - (void)padBottomBy:(CGFloat)points
 {
@@ -149,7 +200,7 @@
   self.frame = frame;
 }
 
-#pragma - Placements
+#pragma - Placement
 
 - (void)placeYAfterView:(UIView *)view withMargin:(CGFloat)margin
 {
@@ -183,7 +234,7 @@
   self.frame = frame;
 }
 
-#pragma - Corner Radius
+#pragma - Radius
 
 - (void)roundByWidth
 {
@@ -200,7 +251,7 @@
   self.layer.cornerRadius = radius;
 }
 
-#pragma - Set frame attributes
+#pragma - Frame
 
 - (void)setFrameOriginX:(CGFloat)x
 {

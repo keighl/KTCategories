@@ -6,35 +6,46 @@
 //  Copyright (c) 2012 Kyle Truscott. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
 @interface UIView (KTExtras)
 
-- (void)anchorToTopInRect:(CGRect)rect withMargin:(CGFloat)margin;
+// Anchors
+
 - (void)anchorToTop;
 - (void)anchorToTopWithMargin:(CGFloat)margin;
+- (void)anchorToTopInRect:(CGRect)rect withMargin:(CGFloat)margin;
 
-- (void)anchorToBottomInRect:(CGRect)rect withMargin:(CGFloat)margin;
 - (void)anchorToBottom;
 - (void)anchorToBottomWithMargin:(CGFloat)margin;
+- (void)anchorToBottomInRect:(CGRect)rect withMargin:(CGFloat)margin;
 
-- (void)anchorToLeftInRect:(CGRect)rect withMargin:(CGFloat)margin;;
 - (void)anchorToLeft;
 - (void)anchorToLeftWithMargin:(CGFloat)margin;
+- (void)anchorToLeftInRect:(CGRect)rect withMargin:(CGFloat)margin;
 
-- (void)anchorToRightInRect:(CGRect)rect withMargin:(CGFloat)margin;;
 - (void)anchorToRight;
+- (void)anchorToRightInRect:(CGRect)rect withMargin:(CGFloat)margin;
 - (void)anchorToRightWithMargin:(CGFloat)margin;
 
-- (void)centerXY;
-- (void)centerXYInRect:(CGRect)rect;
-- (void)centerX;
-- (void)centerXInRect:(CGRect)rect;
-- (void)centerY;
-- (void)centerYInRect:(CGRect)rect;
+- (void)anchorToTopOnRect:(CGRect)rect withMargin:(CGFloat)margin;
+- (void)anchorToBottomOnRect:(CGRect)rect withMargin:(CGFloat)margin;
+- (void)anchorToLeftOnRect:(CGRect)rect withMargin:(CGFloat)margin;
+- (void)anchorToRightOnRect:(CGRect)rect withMargin:(CGFloat)margin;
 
-- (void)padTopBy:(CGFloat)points;
-- (void)padBottomBy:(CGFloat)points;
-- (void)padLeftBy:(CGFloat)points;
-- (void)padRightBy:(CGFloat)points;
+// Centers
+
+- (void)centerX;
+- (void)centerXY;
+- (void)centerY;
+- (void)centerXYInRect:(CGRect)rect;
+- (void)centerXInRect:(CGRect)rect;
+- (void)centerYInRect:(CGRect)rect;
+- (void)centerXOnRect:(CGRect)rect;
+- (void)centerYOnRect:(CGRect)rect;
+
+// Placements
 
 - (void)placeYAfterView:(UIView *)view withMargin:(CGFloat)margin;
 - (void)placeXAfterView:(UIView *)view withMargin:(CGFloat)margin;
@@ -42,9 +53,20 @@
 - (void)placeYBeforeView:(UIView *)view withMargin:(CGFloat)margin;
 - (void)placeXBeforeView:(UIView *)view withMargin:(CGFloat)margin;
 
+// Padding
+
+- (void)padTopBy:(CGFloat)points;
+- (void)padBottomBy:(CGFloat)points;
+- (void)padLeftBy:(CGFloat)points;
+- (void)padRightBy:(CGFloat)points;
+
+// Rounding
+
 - (void)roundByWidth;
 - (void)roundByHeight;
 - (void)roundBy:(CGFloat)radius;
+
+// Frame
 
 - (void)setFrameOriginX:(CGFloat)x;
 - (void)setFrameOriginY:(CGFloat)y;
