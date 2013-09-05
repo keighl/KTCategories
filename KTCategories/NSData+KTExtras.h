@@ -10,6 +10,11 @@
 
 @interface NSData (KTExtras)
 
+/**
+ * Generate a Base64 encoded string from a data object
+ *
+ * @param data An NSData object
+ */
 + (NSString *)base64WithData:(NSData *)data;
 
 @end
