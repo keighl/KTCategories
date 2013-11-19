@@ -14,13 +14,13 @@
                          views:(NSDictionary *)views
 {
   return [NSLayoutConstraint constraintsWithVisualFormat:format
-                                                options:nil
+                                                options:NSLayoutFormatDirectionLeadingToTrailing
                                                  metrics:nil
                                                    views:views];
 }
 
 + (NSLayoutConstraint *)makeThis:(id)object
-                           equal:(NSLayoutAttribute *)attr
+                           equal:(NSLayoutAttribute)attr
                           toThat:(id)that
 {
   return [NSLayoutConstraint constraintWithItem:object
@@ -42,5 +42,34 @@
   return [NSString stringWithFormat:@"%f", x];
 }
 
++ (void)fallbackAnimateWithDuration:(float)duration
+                              delay:(float)delay
+             usingSpringWithDamping:(float)damping
+              initialSpringVelocity:(float)velocity
+                            options:(UIViewAnimationOptions)options
+                         animations:(void (^)(void))animations
+                         completion:(void (^)(BOOL finished))completion
+{
+  
+  if ([UIView respondsToSelector:@selector(animateWithDuration:delay:usingSpringWithDamping:initialSpringVelocity:options:animations:completion:)])
+  {
+    [UIView animateWithDuration:.5f
+                          delay:0
+         usingSpringWithDamping:.5f
+          initialSpringVelocity:.2f
+                        options:UIViewAnimationOptionTransitionNone
+                     animations:animations
+                     completion:completion];
+  }
+  else
+  {
+    [UIView animateWithDuration:duration
+                          delay:delay
+                        options:options
+                     animations:animations
+                     completion:completion];
+  }
+
+}
 
 @end

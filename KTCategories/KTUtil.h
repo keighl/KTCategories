@@ -31,7 +31,7 @@
  * @params that source object
  */
 + (NSLayoutConstraint *)makeThis:(id)object
-                           equal:(NSLayoutAttribute *)attr
+                           equal:(NSLayoutAttribute)attr
                           toThat:(id)that;
 
 /**
@@ -47,5 +47,13 @@
  * @param x a float
  */
 + (NSString *)floatToString:(float)x;
+
++ (void)fallbackAnimateWithDuration:(float)duration
+                              delay:(float)delay
+             usingSpringWithDamping:(float)damping
+              initialSpringVelocity:(float)velocity
+                            options:(UIViewAnimationOptions)options
+                         animations:(void (^)(void))animations
+                         completion:(void (^)(BOOL finished))completion;
 
 @end
