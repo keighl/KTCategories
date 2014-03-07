@@ -81,3 +81,7 @@ Some fun categories I use in a lot of my iOS projects!
 ## NSData+KTExtras.h
 
     + (NSString *)base64WithData:(NSData *)data;
+
+## NSString+KTExtras.h
+
+    + (NSString *)removeOrphans;
