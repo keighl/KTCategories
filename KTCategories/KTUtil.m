@@ -32,6 +32,20 @@
                                        constant:0.f];
 }
 
++ (NSLayoutConstraint *)makeThis:(id)object
+                           equal:(NSLayoutAttribute)attr
+                          toThat:(id)that
+                    withConstant:(float)constant
+{
+  return [NSLayoutConstraint constraintWithItem:object
+                                      attribute:attr
+                                      relatedBy:NSLayoutRelationEqual
+                                         toItem:that
+                                      attribute:attr
+                                     multiplier:1.f
+                                       constant:constant];
+}
+
 + (NSString *)intToString:(int)x
 {
   return [NSString stringWithFormat:@"%i", x];
@@ -53,11 +67,11 @@
   
   if ([UIView respondsToSelector:@selector(animateWithDuration:delay:usingSpringWithDamping:initialSpringVelocity:options:animations:completion:)])
   {
-    [UIView animateWithDuration:.5f
-                          delay:0
-         usingSpringWithDamping:.5f
-          initialSpringVelocity:.2f
-                        options:UIViewAnimationOptionTransitionNone
+    [UIView animateWithDuration:duration
+                          delay:delay
+         usingSpringWithDamping:damping
+          initialSpringVelocity:velocity
+                        options:options
                      animations:animations
                      completion:completion];
   }

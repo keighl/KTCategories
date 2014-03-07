@@ -28,11 +28,25 @@
  *
  * @param object target object
  * @param attr NSLayoutAttribute
- * @params that source object
+ * @param that source object
  */
 + (NSLayoutConstraint *)makeThis:(id)object
                            equal:(NSLayoutAttribute)attr
                           toThat:(id)that;
+
+/**
+ * Generate a NSLayoutConstraint that binds an view NSLayoutAttribute to that of another view.
+ * Assumes NSLayoutRelationEqual, multiplier 1.f
+ *
+ * @param object target object
+ * @param attr NSLayoutAttribute
+ * @param that source object
+ * @param constant
+ */
++ (NSLayoutConstraint *)makeThis:(id)object
+                           equal:(NSLayoutAttribute)attr
+                          toThat:(id)that
+                    withConstant:(float)constant;
 
 /**
  * Quickly convert an int into a string
