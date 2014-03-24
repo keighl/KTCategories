@@ -13,7 +13,7 @@
 - (NSString *)removeOrphans
 {
   NSError *error = NULL;
-  NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"\\s([\\w\\?\\.!-]+)$"
+  NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@" ([\\w\\?\\.!-]+)$"
                                                                          options:NSRegularExpressionCaseInsensitive
                                                                            error:&error];
   
