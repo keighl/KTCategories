@@ -36,7 +36,7 @@
 
 /**
  * Generate a NSLayoutConstraint that binds an view NSLayoutAttribute to that of another view.
- * Assumes NSLayoutRelationEqual, multiplier 1.f
+ * Assumes NSLayoutRelationEqual, multiplier 1.f, and constant 0.f
  *
  * @param object target object
  * @param attr NSLayoutAttribute
