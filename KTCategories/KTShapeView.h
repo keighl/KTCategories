@@ -10,7 +10,8 @@
 
 @interface KTShapeView : UIView
 
-@property (nonatomic, strong) UIBezierPath *shapePath;
 @property (nonatomic, strong) CAShapeLayer *shapeLayer;
+
++ (id)initWithShapeLayer:(CAShapeLayer *)shapeLayer;
 
 @end

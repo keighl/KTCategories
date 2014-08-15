@@ -10,16 +10,11 @@
 
 @implementation KTShapeView
 
-- (id)init
++ (id)initWithShapeLayer:(CAShapeLayer *)shapeLayer
 {
-  self = [super init];
-
-  if (self)
-  {
-    self.shapeLayer = [CAShapeLayer layer];
-  }
-
-  return self;
+  KTShapeView *view = [KTShapeView new];
+  view.shapeLayer = shapeLayer;
+  return view;
 }
 
 - (void)setShapeLayer:(CAShapeLayer *)shapeLayer
@@ -27,16 +22,6 @@
   [self.shapeLayer removeFromSuperlayer];
   _shapeLayer = shapeLayer;
   [self.layer addSublayer:self.shapeLayer];
-}
-
-- (void)setShapePath:(UIBezierPath *)shapePath
-{
-  _shapePath = shapePath;
-
-  self.shapeLayer = [CAShapeLayer layer];
-  self.shapeLayer.path = [self.shapePath CGPath];
-  self.shapeLayer.anchorPoint = CGPointMake(0.5, 0.5);
-  self.shapeLayer.frame = self.shapePath.bounds;
 
   [self invalidateIntrinsicContentSize];
   [self setNeedsLayout];

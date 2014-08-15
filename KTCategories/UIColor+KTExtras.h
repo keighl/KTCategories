@@ -27,4 +27,21 @@
 + (UIColor *)greyColorWithBrightness:(float)brightness
                                alpha:(float)alpha;
 
+
+/**
+ * Generate a UIColor from a RGB Hex string like FFFFFF (no #)
+ *
+ * @param rgbHexString 6 character HEX color string (no #)
+ */
++ (UIColor *)colorWithRGBHexString:(NSString *)rgbHexString;
+
+/**
+ * Generate a UIColor from a RGB Hex string like FFFFFF (no #)
+ *
+ * @param rgbHexString 6 character HEX color string (no #)
+ * @param alpha The alpha value (0.5f)
+ */
++ (UIColor *)colorWithRGBHexString:(NSString *)rgbHexString
+                             alpha:(float)alpha;
+
 @end

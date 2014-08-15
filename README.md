@@ -9,6 +9,23 @@ Some fun categories I use in a lot of my iOS projects!
     + (NSString *)intToString:(int)x;
     + (NSString *)floatToString:(float)x;
 
+## UIColor+KTExtras.h
+
+    + (UIColor *)greyColorWithBrightness:(CGFloat)brightness;
+    + (UIColor *)greyColorWithBrightness:(CGFloat)brightness alpha:(float)alpha;
+    + (UIColor *)colorWithRGBHexString:(NSString *)rgbHexString;
+    + (UIColor *)colorWithRGBHexString:(NSString *)rgbHexString alpha:(float)alpha;
+
+## KTEdgeLabel.h
+
+* Provides optional `edgeInsets` property for label 'padding'
+
+## KTShapeView.h
+
+* Gives an autlayout-able view for a CAShapeLayer
+
+    + (id)initWithShapeLayer:(CAShapeLayer *)shapeLayer
+
 ## UIView+KTExtras.h
 
 ### Anchor
@@ -73,15 +90,5 @@ Some fun categories I use in a lot of my iOS projects!
     (void)setFrameSizeWidth:(CGFloat)width;
     (void)setFrameSizeHeight:(CGFloat)height;
 
-## UIColor+KTExtras.h
 
-    + (UIColor *)greyColorWithBrightness:(CGFloat)brightness;
-    + (UIColor *)greyColorWithBrightness:(CGFloat)brightness alpha:(float)alpha;
 
-## NSData+KTExtras.h
-
-    + (NSString *)base64WithData:(NSData *)data;
-
-## NSString+KTExtras.h
-
-    + (NSString *)removeOrphans;
