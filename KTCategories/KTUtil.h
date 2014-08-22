@@ -10,6 +10,9 @@
 
 @class NSLayoutConstraint;
 
+/**
+ * A fun collection of useful class methods
+ */
 @interface KTUtil : NSObject
 
 /**
@@ -62,6 +65,10 @@
  */
 + (NSString *)floatToString:(float)x;
 
+
+/**
+ * A wrapper for animateWithDuration:usingSpringWithDamping that falls back to a plain-jane animateWithDuration
+ */
 + (void)fallbackAnimateWithDuration:(float)duration
                               delay:(float)delay
              usingSpringWithDamping:(float)damping

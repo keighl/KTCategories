@@ -27,7 +27,6 @@
 + (UIColor *)greyColorWithBrightness:(float)brightness
                                alpha:(float)alpha;
 
-
 /**
  * Generate a UIColor from a RGB Hex string like FFFFFF (no #)
  *

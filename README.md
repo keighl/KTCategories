@@ -1,6 +1,6 @@
 # KTCategories
 
-Some fun categories I use in a lot of my iOS projects!
+Some code I use in a lot of iOS projects!
 
 ## KTUtil.h
 
@@ -8,6 +8,13 @@ Some fun categories I use in a lot of my iOS projects!
     + (NSLayoutConstraint *)makeThis:(id)object equal:(NSLayoutAttribute *)attr toThat:(id)that;
     + (NSString *)intToString:(int)x;
     + (NSString *)floatToString:(float)x;
+    + fallbackAnimateWithDuration:(float)duration
+                            delay:(float)delay
+           usingSpringWithDamping:(float)damping
+            initialSpringVelocity:(float)velocity
+                          options:(UIViewAnimationOptions)options
+                       animations:(void (^)(void))animations
+                       completion:(void (^)(BOOL finished))completion;
 
 ## UIColor+KTExtras.h
 
@@ -27,6 +34,8 @@ Some fun categories I use in a lot of my iOS projects!
     + (id)initWithShapeLayer:(CAShapeLayer *)shapeLayer
 
 ## UIView+KTExtras.h
+
+For when you can't use autolayout!
 
 ### Anchor
 

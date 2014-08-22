@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ * A label with padding!
+ */
 @interface KTEdgeLabel : UILabel
 
 @property UIEdgeInsets edgeInsets;

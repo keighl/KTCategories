@@ -21,6 +21,7 @@
 {
   [self.shapeLayer removeFromSuperlayer];
   _shapeLayer = shapeLayer;
+  _shapeLayer.anchorPoint = CGPointMake(0.5, 0.5);
   [self.layer addSublayer:self.shapeLayer];
 
   [self invalidateIntrinsicContentSize];
@@ -30,6 +31,13 @@
 - (CGSize)intrinsicContentSize
 {
   return self.shapeLayer.bounds.size;
+}
+
+- (void)layoutSubviews
+{
+  [super layoutSubviews];
+  CGRect frame = self.bounds;
+  self.shapeLayer.position = CGPointMake(CGRectGetMidX(frame), CGRectGetMidY(frame));
 }
 
 @end
