@@ -2,6 +2,8 @@
 
 Some code I use in a lot of iOS projects!
 
+`pod 'KTCategories', git: 'https://github.com/keighl/KTCategories.git'`
+
 ## KTUtil.h
 
     + (NSArray *)visualConstraints:(NSString *)format views:(NSDictionary *)views;
