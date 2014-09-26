@@ -19,6 +19,16 @@
                                                    views:views];
 }
 
++ (NSArray *)visualConstraints:(NSString *)format
+                         views:(NSDictionary *)views
+                       metrics:(NSDictionary *)metrics
+{
+  return [NSLayoutConstraint constraintsWithVisualFormat:format
+                                                options:NSLayoutFormatDirectionLeadingToTrailing
+                                                 metrics:metrics
+                                                   views:views];
+}
+
 + (NSLayoutConstraint *)makeThis:(id)object
                            equal:(NSLayoutAttribute)attr
                           toThat:(id)that
@@ -64,7 +74,7 @@
                          animations:(void (^)(void))animations
                          completion:(void (^)(BOOL finished))completion
 {
-  
+
   if ([UIView respondsToSelector:@selector(animateWithDuration:delay:usingSpringWithDamping:initialSpringVelocity:options:animations:completion:)])
   {
     [UIView animateWithDuration:duration

@@ -26,6 +26,18 @@
                          views:(NSDictionary *)views;
 
 /**
+ * Generate an array of NSLayoutConstraints
+ * If you don't have any options or metrcis args, a quicker way to generate constraints for a set of views
+ *
+ * @param format A string containing the visual format you need
+ * @param views A dictionary of views
+ * @param views A dictionary of metrics
+ */
++ (NSArray *)visualConstraints:(NSString *)format
+                         views:(NSDictionary *)views
+                       metrics:(NSDictionary *)metrics;
+
+/**
  * Generate a NSLayoutConstraint that binds an view NSLayoutAttribute to that of another view.
  * Assumes NSLayoutRelationEqual, multiplier 1.f, and constant 0.f
  *

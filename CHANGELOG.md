@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.0.5 - 2014-09-26
+
+### Added
+
+- `+visualConstraints:views:metrics:`
+
 ## 0.0.4 - 2014-08-15
 
 ### Added

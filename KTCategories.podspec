@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "KTCategories"
-  s.version          = "0.0.4"
+  s.version          = "0.0.5"
   s.summary          = "A handful of semi-useful Categories and Classes"
 
   s.homepage         = "https://github.com/keighl/KTCategories"
