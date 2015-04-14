@@ -43,4 +43,19 @@
 + (UIColor *)colorWithRGBHexString:(NSString *)rgbHexString
                              alpha:(float)alpha;
 
+
+
+/**
+ * Returns a new UIColor instance that has been "adjusted" by HSBA values. Helpful for returning a slightly darker/brighter color, or a slightly more/less opaque color.
+ *
+ * @param hue Value by which to adjust the hue
+ * @param saturation Value by which to adjust the saturation
+ * @param brightness Value by which to adjust the brightness
+ * @param alpha Value by which to adjust the alpha
+ */
+- (UIColor *)colorWithAdjustedHue:(CGFloat)hue
+                       saturation:(CGFloat)saturation
+                       brightness:(CGFloat)brightness
+                            alpha:(CGFloat)alpha;
+
 @end

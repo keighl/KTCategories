@@ -24,6 +24,10 @@ Some code I use in a lot of iOS projects!
     + (UIColor *)greyColorWithBrightness:(CGFloat)brightness alpha:(float)alpha;
     + (UIColor *)colorWithRGBHexString:(NSString *)rgbHexString;
     + (UIColor *)colorWithRGBHexString:(NSString *)rgbHexString alpha:(float)alpha;
+    - (UIColor *)colorWithAdjustedHue:(CGFloat)hue
+                           saturation:(CGFloat)saturation
+                           brightness:(CGFloat)brightness
+                                alpha:(CGFloat)alpha;
 
 ## KTEdgeLabel.h
 

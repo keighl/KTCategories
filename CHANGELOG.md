@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.0.6 - 2015-04-14
+
+### Added
+
+```objc
+- (UIColor *)colorWithAdjustedHue:(CGFloat)hue
+                       saturation:(CGFloat)saturation
+                       brightness:(CGFloat)brightness
+                            alpha:(CGFloat)alpha;
+```
+
 ## 0.0.5 - 2014-09-26
 
 ### Added

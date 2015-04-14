@@ -40,4 +40,22 @@
   return [UIColor colorWithRed:((rgbValue & 0xFF0000) >> 16)/255.0 green:((rgbValue & 0xFF00) >> 8)/255.0 blue:(rgbValue & 0xFF)/255.0 alpha:alpha];
 }
 
+- (UIColor *)colorWithAdjustedHue:(CGFloat)hue
+                       saturation:(CGFloat)saturation
+                       brightness:(CGFloat)brightness
+                            alpha:(CGFloat)alpha
+{
+  CGFloat _h;
+  CGFloat _s;
+  CGFloat _b;
+  CGFloat _a;
+
+  [self getHue:&_h saturation:&_s brightness:&_b alpha:&_a];
+
+  return [UIColor colorWithHue:_h+hue
+                    saturation:_s+saturation
+                    brightness:_s+brightness
+                         alpha:_a+alpha];
+}
+
 @end
