@@ -54,7 +54,7 @@
 
   return [UIColor colorWithHue:_h+hue
                     saturation:_s+saturation
-                    brightness:_s+brightness
+                    brightness:_b+brightness
                          alpha:_a+alpha];
 }
 
