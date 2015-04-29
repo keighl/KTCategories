@@ -39,6 +39,14 @@ Some code I use in a lot of iOS projects!
 
     + (id)initWithShapeLayer:(CAShapeLayer *)shapeLayer
 
+
+## NSArray+KTExtras.h
+
+```objc
+- (NSArray *)removeDuplicatesUsingKey:(NSString *)key
+                         withResolver:(KTDuplicateResolver)resolver;
+```
+
 ## UIView+KTExtras.h
 
 For when you can't use autolayout!
