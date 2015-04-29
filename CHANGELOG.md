@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file.
 
+## 0.0.8 - 2015-04-28
+
+### Added
+
+```objc
+- (NSArray *)removeDuplicatesUsingKey:(NSString *)key
+                         withResolver:(KTDuplicateResolver)resolver;
+```
+
+## 0.0.7 - 2015-04-22
+
+### Fixed
+
+* `colorWithAdjustedHue...` giving back wrong color!
+
+
 ## 0.0.6 - 2015-04-14
 
 ### Added
