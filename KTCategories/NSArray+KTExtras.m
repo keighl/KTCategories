@@ -20,18 +20,16 @@
     [objsWithValue addObject:obj];
     trackingTable[value] = objsWithValue;
   }];
-  
-  NSMutableArray *newArray = [NSMutableArray arrayWithArray:self];
-  
-  [trackingTable enumerateKeysAndObjectsUsingBlock:^(id key, NSMutableArray *obj, BOOL *stop) {
-    if (obj.count > 0)
-    {
-      id winner = resolver(obj);
-      [obj removeObject:winner];
-      [newArray removeObjectsInArray:obj];
-    }
+
+  NSMutableArray *newArray = [NSMutableArray new];
+
+  [trackingTable enumerateKeysAndObjectsUsingBlock:^(id val, NSMutableArray *obj, BOOL *stop) {
+    if (obj.count > 1)
+      [newArray addObject:resolver(obj)];
+    else if (obj.count == 1)
+      [newArray addObject:obj.firstObject];
   }];
-  
+
   return newArray;
 }
 
